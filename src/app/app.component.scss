@@ -1,0 +1,48 @@
+.auth-main{
+  position: fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background: #808080;
+  padding:50px 200px;
+  .auth-inner{
+    border-radius: 30px;
+    background: #212121;
+    height: 100%;
+    overflow: hidden;
+    border:2px #212121 solid;
+    .auth-form{
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      width: 100%;
+      text-align: center;
+      .auth-logo{
+        width:100px;
+      }
+      .auth-title{
+        padding:10px 0px;
+        color: white;
+        font-weight: 600;
+        font-size: 20px;
+      }
+      .form-group{
+        margin-bottom:8px;
+        .form-control{
+          background: #E8F0FE;
+          border-radius:15px;
+        }
+        .submit-button{
+          background: transparent;
+          border: 1px solid #E8F0FE;
+          border-radius:15px;
+          width:100%;
+          padding:8px 10px;
+          color: white;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}

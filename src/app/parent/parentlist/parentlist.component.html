@@ -1,0 +1,74 @@
+<div class="x-wrapper">
+
+  <!-- <div class="x-header  p-3">
+    <div class="row">
+      <div class="col-md-4">
+        <label>Class</label>
+        <select (change)="change()" [(ngModel)]="_class" class="form-control">
+          <option *ngFor="let class of basic.classes" value="{{class.id}}">{{class.name}}</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label>Section</label>
+        <select class="form-control" [(ngModel)]="_section">
+          <option value="all">All</option>
+          <option *ngFor="let section of sections" value="{{section.id}}">{{section.name}}</option>
+        </select>
+      </div>
+      <div class="col-md-4 pt-4">
+        <button class="btn btn-primary  me-2" (click)="load()">Load</button>
+        <button class="btn btn-danger ">Reset</button>
+      </div>
+
+    </div>
+  </div> -->
+  <div class="x-body">
+    <div class="p-3">
+      <div class="data-table-wrapper">
+        <table class="table data-table">
+          <tr>
+            <th>
+              SN
+            </th>
+            <th>
+              Gaurdian Name
+            </th>
+            <th>
+              occupation
+            </th>
+            <th>
+              Mobile No
+            </th>
+            <th>
+              Email
+            </th>
+            <th>
+              #
+            </th>
+          </tr>
+          <tr *ngFor="let parent of parents">
+            <td>
+              {{ parent.id }}
+            </td>
+            <td>
+              {{parent.name}}
+            </td>
+            <td>
+              {{parent.occupation}}
+            </td>
+            <td>
+              {{parent.mobileno}}
+            </td>
+            <td>
+              {{parent.email}}
+            </td>
+            <td>
+
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

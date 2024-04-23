@@ -1,0 +1,83 @@
+<div class="x-wrapper" *ngIf="basic.loaded">
+
+    <div class="x-header  p-3">
+        <div class="row">
+            <div class="col-md-4">
+                <label >Class</label>
+                <select (change)="change()" [(ngModel)]="_class" class="form-control">
+                    <option *ngFor="let class of basic.classes" value="{{class.id}}">{{class.name}}</option>
+                </select>
+            </div>
+            <div class="col-md-4" >
+                <label >Section</label>
+                <select class="form-control" [(ngModel)]="_section">
+                    <option value="all">All</option>
+                    <option *ngFor="let section of sections" value="{{section.id}}">{{section.name}}</option>
+                </select>
+            </div>
+            <div class="col-md-4 pt-4">
+                <button class="btn btn-primary  me-2" (click)="load()">Load</button>
+                <button class="btn btn-danger ">Reset</button>
+            </div>
+            
+        </div>
+    </div>
+    <div class="x-body" >
+        <div *ngIf="state==1" class="p-3 text-center" >
+            <spinner color="red"  size="50"></spinner>
+        </div>
+        <div *ngIf="state==2"  class="p-3">
+            <div class="data-table-wrapper">
+                <table class="table data-table" >
+                    <tr>
+                        <th>
+                            Photo
+                        </th>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Register No
+                        </th>
+                        <th>
+                            Roll
+                        </th>
+                        <th>
+                            Age
+                        </th>
+                        <th>
+                            Gaurdian Name
+                        </th>
+                        <th>
+                            Fees Progress
+                        </th>
+                        <th>
+                            Action
+                        </th>
+                    </tr>
+                    <tr *ngFor="let student of students">
+                        <td>
+                            <img src="{{url+student.photo}}" alt="">
+                        </td>
+                        <td>
+                            {{student.first_name+" "+student.middle_name+" "+student.last_name}}
+                        </td>
+                        <td>
+                            {{student.register_no}}
+                        </td>
+                        <td>
+                            {{student.roll}}
+                        </td>
+                        <td>
+                            {{age(student)}} 
+                        </td>
+                        <td>
+    
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

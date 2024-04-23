@@ -1,0 +1,39 @@
+.menu{
+  position: absolute;
+  top:0px;
+  bottom:0px;
+  left:0px;
+  width:250px;
+  overflow: hidden;
+  border-radius: 0px;
+  .inner{
+    position: absolute;
+    top:0;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    background: #19222a;
+    overflow-y: auto;
+    overflow-x: hidden;
+    // .header{
+    //   padding: 10px;
+    //   .title{
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: flex-start;
+    //     img{
+    //       width:20%;
+    //       border-radius: 50%;
+    //     }
+    //     span{
+    //       font-weight: 800;
+    //       font-size: 25px;
+    //       padding-left: 10px;
+    //     }
+    //   }
+
+    // }
+
+
+  }
+}

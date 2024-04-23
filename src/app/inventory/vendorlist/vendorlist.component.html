@@ -1,0 +1,57 @@
+<div class="x-wrapper">
+  <div class="x-body">
+    <div class="p-3">
+      <div class="data-table-wrapper">
+        <table class="table data-table">
+          <tr>
+            <th>
+              SN
+            </th>
+            <th>
+              Vendor Name
+            </th>
+            <th>
+              Phone Number
+            </th>
+            <th>
+              Address1
+            </th>
+            <th>
+              Address2
+            </th>
+            <th>
+              Email
+            </th>
+            <th>
+              #
+            </th>
+          </tr>
+          <tr *ngFor="let vendor of vendors">
+            <td>
+              {{ vendor.id }}
+            </td>
+            <td>
+              {{vendor.name}}
+            </td>
+            <td>
+              {{vendor.phone}}
+            </td>
+            <td>
+              {{vendor.address1}}
+            </td>
+            <td>
+              {{vendor.address2}}
+            </td>
+            <td>
+              {{vendor.email}}
+            </td>
+            <td>
+
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

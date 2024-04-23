@@ -1,0 +1,29 @@
+<!-- <div class="list">
+
+  <div class="item" *ngFor="let menu of menus">
+    <div class="item-inner" [routerLink]="[menu.path]" routerLinkActive="router-link-active" >
+      <div class="content">
+        <span>
+          <icon name="{{menu.icon}}"></icon>
+          <span>
+            {{menu.title}}
+          </span>
+        </span>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<ul>
+  <li class="item" *ngFor="let menu of menus">
+    <a [routerLink]="[menu.path]" routerLinkActive="router-link-active">
+      <img src="/assets/svg/{{menu.icon}}.svg" alt="">
+      <span>{{menu.title}</span>
+    </a>
+    <ul class="nav-flyout" *ngIf="menu.children!=null">
+      <li *ngFor="let _menu of menu.children">
+        <a href="#"><i class="ion-ios-color-filter-outline"></i>Derps</a>
+      </li>
+    </ul>
+  </li>
+</ul>

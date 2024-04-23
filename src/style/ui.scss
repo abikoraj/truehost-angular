@@ -1,0 +1,56 @@
+@import "spinner.scss";
+.center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+label{
+  font-weight: 600;
+}
+
+.p-relative{
+  position: relative;
+}
+
+.data-table-wrapper{
+  border-radius: 5px;
+  overflow:hidden ;
+
+  box-shadow: 0px 0px 10px 0px grey;
+  .data-table{
+    border-collapse: collapse;
+    margin-bottom: 0px !important;
+    tr{
+      border-top:1px solid #36304A47;
+      th{
+        background: #36304A;
+        padding: 8px;
+        color:white;
+        font-weight: 500;
+      }
+      td{
+        background: white;
+        color:grey;
+        padding: 8px;
+        img{
+          max-width: 120px;
+        }
+      }
+    }
+  }
+}
+
+.x-wrapper{
+  position: relative;
+  .x-header{
+    position: sticky;
+    top:0;
+    background: white;
+    box-shadow: 0px 0px 10px 0px #00000012;
+    .btn{
+      min-width: 125px;
+    }
+  }
+}

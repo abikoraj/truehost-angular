@@ -1,0 +1,96 @@
+<div class="x-wrapper" *ngIf="basic.loaded">
+
+  <div class="x-header  p-3">
+    <div class="row">
+      <div class="col-md-4">
+        <label>Class</label>
+        <select (change)="change()" [(ngModel)]="_class" class="form-control">
+          <option *ngFor="let class of basic.classes" value="{{class.id}}">{{class.name}}</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label>Section</label>
+        <select class="form-control" [(ngModel)]="_section">
+          <option value="all">All</option>
+          <option *ngFor="let section of sections" value="{{section.id}}">{{section.name}}</option>
+        </select>
+      </div>
+      <div class="col-md-4 pt-4">
+        <button class="btn btn-primary  me-2" (click)="load()">Load</button>
+        <button class="btn btn-danger ">Reset</button>
+      </div>
+
+    </div>
+  </div>
+  <div class="x-body">
+    <div *ngIf="state==1" class="p-3 text-center">
+      <spinner color="red" size="50"></spinner>
+    </div>
+    <div *ngIf="state==2" class="p-3">
+      <div class="data-table-wrapper">
+        <table class="table data-table">
+          <tr>
+            <th>
+              Student
+            </th>
+            <th>
+              Class
+            </th>
+            <th>
+              Section
+            </th>
+            <th>
+              Register No
+            </th>
+            <th>
+              Roll
+            </th>
+            <th>
+              Mobile No
+            </th>
+            <th>
+              Fee Group
+            </th>
+            <th>
+              Status
+            </th>
+            <th>
+              Action
+            </th>
+          </tr>
+          <tr *ngFor="let invoice of invoices">
+            <td>
+              {{invoice.first_name+" "+invoice.last_name}}
+            </td>
+            <td>
+              {{invoice.class_name}}
+            </td>
+            <td>
+              {{invoice.section_name}}
+            </td>
+            <td>
+              {{invoice.register_no}}
+            </td>
+            <td>
+              {{invoice.roll}}
+            </td>
+            <td>
+              {{invoice.mobileno}}
+            </td>
+            <td>
+              {{invoice.feegroup}}
+            </td>
+            <td>
+              {{invoice.roll}}
+            </td>
+
+
+            <td>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>

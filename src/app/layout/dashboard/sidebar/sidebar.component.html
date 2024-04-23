@@ -1,0 +1,43 @@
+<div class="menu">
+  <!-- <div class="inner">
+    <div class="header">
+      <div class="title pt-2">
+        <img src="/assets/test.png" alt="">
+        <span>
+          TRUEHOST
+        </span>
+      </div>
+      <hr>
+
+    </div>
+    <app-menuitem [menus]="menus"></app-menuitem>
+  </div> -->
+  <div class="inner">
+
+    <aside class="sidebar">
+      <header>
+        Menu
+      </header>
+      <nav class="sidebar-nav">
+        <ul>
+          <li class="item" *ngFor="let menu of menus">
+            <a [routerLink]="[menu.path]" routerLinkActive="active">
+              <img src="/assets/svg/{{menu.icon}}.svg" alt="" style="height: 20px;margin-right: 10px;">
+              <span>{{menu.title}}</span>
+            </a>
+            <ul class="nav-flyout" *ngIf="menu.children!=null"
+              style="background-color: rgba(0, 0, 0, .85); max-width: 130px;">
+              <li *ngFor="let _menu of menu.children">
+                <a [routerLink]="[_menu.path]" routerLinkActive="active">
+                  <!-- <img src="/assets/svg/{{_menu.icon}}.svg" alt="" style="height: 20px;margin-right: 10px;"> -->
+                  {{_menu.title}}
+                </a>
+              </li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+    </aside>
+  </div>
+</div>

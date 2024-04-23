@@ -1,0 +1,36 @@
+@import "style/sidebar.scss";
+@import "style/ui.scss";
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300;400;500;600;700&display=swap');
+@import "/node_modules/angular-notifier/styles.scss";
+*{
+  font-family: 'Signika', sans-serif;
+}
+:root{
+  --primary-black:#14121E;
+  --secondary-black:#5c5c5c;
+}
+body {
+  background: #DFE1EE !important;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #DFE1EE;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
